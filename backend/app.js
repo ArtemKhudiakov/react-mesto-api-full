@@ -5,6 +5,7 @@ const { errors } = require('celebrate');
 const NotFoundError = require('./error/notfound-error');
 const { login, createUser } = require('./controllers/users');
 const auth = require('./middlewares/auth');
+const cors = require('cors')
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const {
   validateLogin,
@@ -14,6 +15,7 @@ const {
 const { PORT = 3000 } = process.env;
 const app = express();
 
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(requestLogger);
