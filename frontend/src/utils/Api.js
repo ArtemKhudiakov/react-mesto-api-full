@@ -91,10 +91,9 @@ export class Api {
 }
 
 export const api = new Api({
-  url: 'https://mesto.nomoreparties.co/v1/cohort-40',
+  url: 'https://api.artemkhudiakov.nomoredomains.sbs',
   headers: {
-    authorization: '6a3dc8fc-cbc8-4cee-b5dd-4c0b0fbbc466',
-    'Content-Type': 'application/json'
+       'Content-Type': 'application/json'
   }
 });
 
