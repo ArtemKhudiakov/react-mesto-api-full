@@ -1,0 +1,10 @@
+.profile__avatar {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+.profile__container:hover .profile__avatar {
+  opacity: .2;
+}
+

@@ -1,0 +1,9 @@
+.popup__edit-input-error {
+  margin-top: 5px;
+  min-height: 30px;
+  min-width: 160px;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 400;
+  display: block;
+}

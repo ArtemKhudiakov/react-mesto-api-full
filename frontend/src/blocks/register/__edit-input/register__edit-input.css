@@ -1,0 +1,9 @@
+.register__edit-input {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: black;
+  color: white;
+  border: none;
+  border-bottom: 1px solid white;
+}

@@ -1,0 +1,19 @@
+.profile__avatar-edit {
+  width: 26px;
+  height: 26px;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  overflow: auto;
+}
+
+.profile__container:hover .profile__avatar-edit {
+  visibility: visible;
+  opacity: 1;
+}
+

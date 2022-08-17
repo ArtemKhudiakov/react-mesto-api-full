@@ -1,0 +1,16 @@
+.popup-confirm__container {
+  font-family: Inter, sans-serif;
+  min-height: 181px;
+  width: 430px;
+  position: relative;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 620px) {
+  .popup-confirm__container {
+    min-height: 322px;
+    width: 282px;
+  }
+}

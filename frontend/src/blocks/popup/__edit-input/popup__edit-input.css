@@ -1,0 +1,21 @@
+.popup__edit-input {
+  margin: 0;
+  padding: 0;
+  min-width: 358px;
+  min-height: 27px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  /* margin-bottom: 30px; */
+}
+
+@media screen and (max-width: 620px) {
+  .popup__edit-input {
+    min-width: 238px;
+  }
+}
