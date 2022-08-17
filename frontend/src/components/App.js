@@ -76,7 +76,7 @@ function App() {
 
   // Handler for likes
   function handleCardLike(card) {
-    const isLiked = card.likes.some(i => i._id === currentUser._id);
+    const isLiked = card.likes.some(i => i === currentUser._id);
     console.log(card.owner._id);
     api.changeLikeCardStatus(card._id, !isLiked)
       .then((newCard) => {
@@ -178,7 +178,7 @@ function App() {
       Auth.checkToken(jwt)
         .then(response => {
           setLoggedIn(true);
-          setEmail(response.data.email);
+          setEmail(response.email);
           history.push('/')
         })
         .catch((err) => {

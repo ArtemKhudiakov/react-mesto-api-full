@@ -5,20 +5,51 @@ const { errors } = require('celebrate');
 const NotFoundError = require('./error/notfound-error');
 const { login, createUser } = require('./controllers/users');
 const auth = require('./middlewares/auth');
-const cors = require('cors')
+const cors = require('cors');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const {
   validateLogin,
   validateCreateUser,
 } = require('./middlewares/validate');
 
+const corsUrl = [
+    'https://artemkhudiakov.nomoredomains.sbs',
+    'http://artemkhudiakov.nomoredomains.sbs',
+    'http://localhost:3000',
+    'https://locahost:3000',
+];
+
 const { PORT = 3000 } = process.env;
 const app = express();
 
-app.use(cors());
+app.use((req, res, next) => {
+  const { origin } = req.headers;
+  const { method } = req;
+  const DEFAULT_METHODS = 'GET,HEAD,PUT,PATCH,POST,DELETE';
+  const requestHeaders = req.headers['access-control-request-headers'];
+
+  if (corsUrl.includes(origin)) {
+    res.header('Access-Control-Allow-Origin', origin);
+  }
+
+  if (method === 'OPTIONS') {
+    res.header('Access-Control-Allow-Methods', DEFAULT_METHODS);
+    res.header('Access-Control-Allow-Headers', requestHeaders);
+    return res.end();
+  }
+  next();
+});
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(requestLogger);
+
+app.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадёт');
+  }, 0);
+});
+
 app.post('/signin', validateLogin, login);
 app.post('/signup', validateCreateUser, createUser);
 
