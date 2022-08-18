@@ -5,7 +5,7 @@ const { errors } = require('celebrate');
 const NotFoundError = require('./error/notfound-error');
 const { login, createUser } = require('./controllers/users');
 const auth = require('./middlewares/auth');
-const cors = require('cors');
+require('dotenv').config();
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const {
   validateLogin,
