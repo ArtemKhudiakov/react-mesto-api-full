@@ -49,7 +49,7 @@ function App() {
   // Checking token
   React.useEffect(() => {
     handleCheckToken();
-  }, []);
+  }, [loggedIn]);
 
   // Redirect to main page when login
   React.useEffect(() => {
