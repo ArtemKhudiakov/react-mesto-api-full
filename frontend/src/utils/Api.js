@@ -29,7 +29,10 @@ export class Api {
   editUserInfo(userInfo) {
     return fetch(this._url + '/users/me', {
       method: 'PATCH',
-      headers: this._headers,
+      headers: {
+        "content-type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem('jwt')}`
+      },
       body: JSON.stringify({
         name: userInfo.name, // из редактирования профиля взять новые фи
         about: userInfo.about
@@ -41,7 +44,10 @@ export class Api {
   addNewCard(data) {
     return fetch(this._url + '/cards', {
       method: 'POST',
-      headers: this._headers,
+      headers: {
+        "content-type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem('jwt')}`
+      },
       body: JSON.stringify({
         name: data.name, // из редактирования места взять новые фи
         link: data.link
@@ -53,7 +59,10 @@ export class Api {
   deleteCard(id) {
     return fetch(this._url + `/cards/${id}`, {
       method: 'DELETE',
-      headers: this._headers
+      headers: {
+        "content-type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem('jwt')}`
+      }
     })
       .then(this._checkOk)
   }
@@ -61,7 +70,10 @@ export class Api {
   changeLikeCardStatus(id, isLiked) {
     return fetch(this._url + `/cards/${id}/likes`, {
       method: isLiked ? "PUT" : "DELETE",
-      headers: this._headers
+      headers: {
+        "content-type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem('jwt')}`
+      }
     })
       .then(this._checkOk)
   }
@@ -78,7 +90,10 @@ export class Api {
   setUserAvatar(data) {
     return fetch(this._url + `/users/me/avatar`, {
       method: 'PATCH',
-      headers: this._headers,
+      headers: {
+        "content-type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem('jwt')}`
+      },
       body: JSON.stringify({
         avatar: data.avatar, // из редактирования аватара взять новое фото
       })
