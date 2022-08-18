@@ -160,7 +160,7 @@ function App() {
         }
       })
       .catch((err) => {
-        // setSignupStatus(false)
+        setSignupStatus(false);
         setInfoTooltipOpen(true);
         console.log(`Авторизация неудалась, ошибка: ${err}`);
       })
