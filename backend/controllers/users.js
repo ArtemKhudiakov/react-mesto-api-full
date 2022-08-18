@@ -5,6 +5,7 @@ const ConflictError = require('../error/conflict-error');
 const NotFoundError = require('../error/notfound-error');
 const AuthError = require('../error/auth-error');
 const User = require('../models/user');
+
 const { NODE_ENV, JWT_SECRET } = process.env;
 
 const getUsers = (req, res, next) => {
