@@ -1,13 +1,32 @@
-# react-mesto-api-full
-Репозиторий для приложения проекта `Mesto`, 
-включающий фронтенд и бэкенд части приложения со следующими возможностями: 
-авторизации и регистрации пользователей, операции с карточками и 
-пользователями. 
-Бэкенд расположите в директории `backend/`, а фронтенд - в `frontend/`. 
+# Full Mesto Project with deploy(frontend + backend)
+Full-stack single page application 
+to allow authorized users to share photos/pictures.
 
-https://artemkhudiakov.nomoredomains.sbs
-https://api.artemkhudiakov.nomoredomains.sbs
+## Функциональность:
+* Registration;
+* Authorization;
+* Profile, avatar editing;
+* Adding/deleting a new photo/picture;
+* Likes;
+* Open photo/picture in full size.
 
-ip: 51.250.72.178
-  
+## Technologies:
+* HTML5;
+* CCS3;
+* React;
+* NodeJS
+* npm;
+* Express;
+* MongodDB;
+* Webpack.
 
+## Folders:
+/backend - folder with the backend part
+/frontend - folder with the frontend part
+
+
+## Launch the project:
+
+* Project: https://artemkhudiakov.nomoredomains.sbs
+* Project API: https://api.artemkhudiakov.nomoredomains.sbs
+* Public IP server: 51.250.72.178
