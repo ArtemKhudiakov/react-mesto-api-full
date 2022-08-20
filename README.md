@@ -1,6 +1,6 @@
 # Full Mesto Project with deploy(frontend + backend)
-Full-stack single page application 
-to allow authorized users to share photos/pictures.
+**Full-stack single page application 
+to allow authorized users to share photos/pictures.**
 
 ## Функциональность:
 * Registration;
@@ -21,8 +21,8 @@ to allow authorized users to share photos/pictures.
 * Webpack.
 
 ## Folders:
-/backend - folder with the backend part
-/frontend - folder with the frontend part
+* /backend - folder with the backend part
+* /frontend - folder with the frontend part
 
 
 ## Launch the project:
